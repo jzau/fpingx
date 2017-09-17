@@ -7,13 +7,87 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		183AEFEF1F6EA7B900EF0AFA /* fpingx.h in Headers */ = {isa = PBXBuildFile; fileRef = 183AEFED1F6EA7B900EF0AFA /* fpingx.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		183AEFFE1F6EA7DB00EF0AFA /* fpingx.h in Headers */ = {isa = PBXBuildFile; fileRef = 183AEFFC1F6EA7DB00EF0AFA /* fpingx.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		183AF01A1F6EA8DF00EF0AFA /* config.h in Headers */ = {isa = PBXBuildFile; fileRef = 183AF0051F6EA8AF00EF0AFA /* config.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		183AF01B1F6EA8DF00EF0AFA /* fping.c in Sources */ = {isa = PBXBuildFile; fileRef = 183AF00C1F6EA8AF00EF0AFA /* fping.c */; };
+		183AF01C1F6EA8DF00EF0AFA /* fping.h in Headers */ = {isa = PBXBuildFile; fileRef = 183AF0081F6EA8AF00EF0AFA /* fping.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		183AF01D1F6EA8DF00EF0AFA /* options.h in Headers */ = {isa = PBXBuildFile; fileRef = 183AF00D1F6EA8AF00EF0AFA /* options.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		183AF01E1F6EA8DF00EF0AFA /* optparse.c in Sources */ = {isa = PBXBuildFile; fileRef = 183AF0091F6EA8AF00EF0AFA /* optparse.c */; };
+		183AF01F1F6EA8DF00EF0AFA /* optparse.h in Headers */ = {isa = PBXBuildFile; fileRef = 183AF00E1F6EA8AF00EF0AFA /* optparse.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		183AF0201F6EA8DF00EF0AFA /* seqmap.c in Sources */ = {isa = PBXBuildFile; fileRef = 183AF0061F6EA8AF00EF0AFA /* seqmap.c */; };
+		183AF0211F6EA8DF00EF0AFA /* seqmap.h in Headers */ = {isa = PBXBuildFile; fileRef = 183AF00A1F6EA8AF00EF0AFA /* seqmap.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		183AF0221F6EA8DF00EF0AFA /* socket4.c in Sources */ = {isa = PBXBuildFile; fileRef = 183AF00B1F6EA8AF00EF0AFA /* socket4.c */; };
+		183AF0231F6EA8DF00EF0AFA /* socket6.c in Sources */ = {isa = PBXBuildFile; fileRef = 183AF0071F6EA8AF00EF0AFA /* socket6.c */; };
+		183AF0261F6EA90B00EF0AFA /* fpingx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 183AF0241F6EA90B00EF0AFA /* fpingx.swift */; };
+		183AF0511F6EAEDF00EF0AFA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 183AF0501F6EAEDF00EF0AFA /* AppDelegate.swift */; };
+		183AF0531F6EAEDF00EF0AFA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 183AF0521F6EAEDF00EF0AFA /* ViewController.swift */; };
+		183AF0561F6EAEDF00EF0AFA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 183AF0541F6EAEDF00EF0AFA /* Main.storyboard */; };
+		183AF0581F6EAEDF00EF0AFA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 183AF0571F6EAEDF00EF0AFA /* Assets.xcassets */; };
+		183AF05B1F6EAEDF00EF0AFA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 183AF0591F6EAEDF00EF0AFA /* LaunchScreen.storyboard */; };
+		183AF0601F6EAF2200EF0AFA /* fpingx.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 183AEFFA1F6EA7DB00EF0AFA /* fpingx.framework */; };
+		183AF0611F6EAF2200EF0AFA /* fpingx.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 183AEFFA1F6EA7DB00EF0AFA /* fpingx.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		183AF0651F6EB32900EF0AFA /* fpingx.h in Headers */ = {isa = PBXBuildFile; fileRef = 183AEFFC1F6EA7DB00EF0AFA /* fpingx.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		183AF0661F6EB33000EF0AFA /* config.h in Headers */ = {isa = PBXBuildFile; fileRef = 183AF0051F6EA8AF00EF0AFA /* config.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		183AF0671F6EB33000EF0AFA /* fping.c in Sources */ = {isa = PBXBuildFile; fileRef = 183AF00C1F6EA8AF00EF0AFA /* fping.c */; };
+		183AF0681F6EB33000EF0AFA /* fping.h in Headers */ = {isa = PBXBuildFile; fileRef = 183AF0081F6EA8AF00EF0AFA /* fping.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		183AF0691F6EB33000EF0AFA /* options.h in Headers */ = {isa = PBXBuildFile; fileRef = 183AF00D1F6EA8AF00EF0AFA /* options.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		183AF06A1F6EB33000EF0AFA /* optparse.c in Sources */ = {isa = PBXBuildFile; fileRef = 183AF0091F6EA8AF00EF0AFA /* optparse.c */; };
+		183AF06B1F6EB33000EF0AFA /* optparse.h in Headers */ = {isa = PBXBuildFile; fileRef = 183AF00E1F6EA8AF00EF0AFA /* optparse.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		183AF06C1F6EB33000EF0AFA /* seqmap.c in Sources */ = {isa = PBXBuildFile; fileRef = 183AF0061F6EA8AF00EF0AFA /* seqmap.c */; };
+		183AF06D1F6EB33000EF0AFA /* seqmap.h in Headers */ = {isa = PBXBuildFile; fileRef = 183AF00A1F6EA8AF00EF0AFA /* seqmap.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		183AF06E1F6EB33000EF0AFA /* socket4.c in Sources */ = {isa = PBXBuildFile; fileRef = 183AF00B1F6EA8AF00EF0AFA /* socket4.c */; };
+		183AF06F1F6EB33000EF0AFA /* socket6.c in Sources */ = {isa = PBXBuildFile; fileRef = 183AF0071F6EA8AF00EF0AFA /* socket6.c */; };
+		183AF0701F6EB3B800EF0AFA /* fpingx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 183AF0241F6EA90B00EF0AFA /* fpingx.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		183AF0621F6EAF2200EF0AFA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 183AEFE11F6EA7B900EF0AFA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 183AEFF91F6EA7DB00EF0AFA;
+			remoteInfo = "fpingx-iOS";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		183AF0641F6EAF2200EF0AFA /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				183AF0611F6EAF2200EF0AFA /* fpingx.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		183AEFEA1F6EA7B900EF0AFA /* fpingx.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = fpingx.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		183AEFED1F6EA7B900EF0AFA /* fpingx.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = fpingx.h; sourceTree = "<group>"; };
-		183AEFEE1F6EA7B900EF0AFA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		183AEFFA1F6EA7DB00EF0AFA /* fpingx.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = fpingx.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		183AEFFC1F6EA7DB00EF0AFA /* fpingx.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = fpingx.h; sourceTree = "<group>"; };
+		183AF0021F6EA82D00EF0AFA /* Info-iOS.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Info-iOS.plist"; sourceTree = "<group>"; };
+		183AF0031F6EA83300EF0AFA /* Info-macOS.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Info-macOS.plist"; sourceTree = "<group>"; };
+		183AF0051F6EA8AF00EF0AFA /* config.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = config.h; sourceTree = "<group>"; };
+		183AF0061F6EA8AF00EF0AFA /* seqmap.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = seqmap.c; sourceTree = "<group>"; };
+		183AF0071F6EA8AF00EF0AFA /* socket6.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = socket6.c; sourceTree = "<group>"; };
+		183AF0081F6EA8AF00EF0AFA /* fping.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = fping.h; sourceTree = "<group>"; };
+		183AF0091F6EA8AF00EF0AFA /* optparse.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = optparse.c; sourceTree = "<group>"; };
+		183AF00A1F6EA8AF00EF0AFA /* seqmap.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = seqmap.h; sourceTree = "<group>"; };
+		183AF00B1F6EA8AF00EF0AFA /* socket4.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = socket4.c; sourceTree = "<group>"; };
+		183AF00C1F6EA8AF00EF0AFA /* fping.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = fping.c; sourceTree = "<group>"; };
+		183AF00D1F6EA8AF00EF0AFA /* options.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = options.h; sourceTree = "<group>"; };
+		183AF00E1F6EA8AF00EF0AFA /* optparse.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = optparse.h; sourceTree = "<group>"; };
+		183AF0241F6EA90B00EF0AFA /* fpingx.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = fpingx.swift; sourceTree = "<group>"; };
+		183AF04E1F6EAEDF00EF0AFA /* Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Demo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		183AF0501F6EAEDF00EF0AFA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		183AF0521F6EAEDF00EF0AFA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		183AF0551F6EAEDF00EF0AFA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		183AF0571F6EAEDF00EF0AFA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		183AF05A1F6EAEDF00EF0AFA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		183AF05C1F6EAEDF00EF0AFA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -24,13 +98,30 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		183AEFF61F6EA7DB00EF0AFA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		183AF04B1F6EAEDF00EF0AFA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				183AF0601F6EAF2200EF0AFA /* fpingx.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
 		183AEFE01F6EA7B900EF0AFA = {
 			isa = PBXGroup;
 			children = (
-				183AEFEC1F6EA7B900EF0AFA /* fpingx */,
+				183AF00F1F6EA8B700EF0AFA /* fping */,
+				183AEFFB1F6EA7DB00EF0AFA /* fpingx */,
+				183AF04F1F6EAEDF00EF0AFA /* Demo */,
 				183AEFEB1F6EA7B900EF0AFA /* Products */,
 			);
 			sourceTree = "<group>";
@@ -39,17 +130,51 @@
 			isa = PBXGroup;
 			children = (
 				183AEFEA1F6EA7B900EF0AFA /* fpingx.framework */,
+				183AEFFA1F6EA7DB00EF0AFA /* fpingx.framework */,
+				183AF04E1F6EAEDF00EF0AFA /* Demo.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		183AEFEC1F6EA7B900EF0AFA /* fpingx */ = {
+		183AEFFB1F6EA7DB00EF0AFA /* fpingx */ = {
 			isa = PBXGroup;
 			children = (
-				183AEFED1F6EA7B900EF0AFA /* fpingx.h */,
-				183AEFEE1F6EA7B900EF0AFA /* Info.plist */,
+				183AEFFC1F6EA7DB00EF0AFA /* fpingx.h */,
+				183AF0241F6EA90B00EF0AFA /* fpingx.swift */,
+				183AF0031F6EA83300EF0AFA /* Info-macOS.plist */,
+				183AF0021F6EA82D00EF0AFA /* Info-iOS.plist */,
 			);
 			path = fpingx;
+			sourceTree = "<group>";
+		};
+		183AF00F1F6EA8B700EF0AFA /* fping */ = {
+			isa = PBXGroup;
+			children = (
+				183AF0051F6EA8AF00EF0AFA /* config.h */,
+				183AF00C1F6EA8AF00EF0AFA /* fping.c */,
+				183AF0081F6EA8AF00EF0AFA /* fping.h */,
+				183AF00D1F6EA8AF00EF0AFA /* options.h */,
+				183AF0091F6EA8AF00EF0AFA /* optparse.c */,
+				183AF00E1F6EA8AF00EF0AFA /* optparse.h */,
+				183AF0061F6EA8AF00EF0AFA /* seqmap.c */,
+				183AF00A1F6EA8AF00EF0AFA /* seqmap.h */,
+				183AF00B1F6EA8AF00EF0AFA /* socket4.c */,
+				183AF0071F6EA8AF00EF0AFA /* socket6.c */,
+			);
+			path = fping;
+			sourceTree = "<group>";
+		};
+		183AF04F1F6EAEDF00EF0AFA /* Demo */ = {
+			isa = PBXGroup;
+			children = (
+				183AF0501F6EAEDF00EF0AFA /* AppDelegate.swift */,
+				183AF0521F6EAEDF00EF0AFA /* ViewController.swift */,
+				183AF0541F6EAEDF00EF0AFA /* Main.storyboard */,
+				183AF0571F6EAEDF00EF0AFA /* Assets.xcassets */,
+				183AF0591F6EAEDF00EF0AFA /* LaunchScreen.storyboard */,
+				183AF05C1F6EAEDF00EF0AFA /* Info.plist */,
+			);
+			path = Demo;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -59,16 +184,34 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				183AEFEF1F6EA7B900EF0AFA /* fpingx.h in Headers */,
+				183AF0681F6EB33000EF0AFA /* fping.h in Headers */,
+				183AF0661F6EB33000EF0AFA /* config.h in Headers */,
+				183AF0651F6EB32900EF0AFA /* fpingx.h in Headers */,
+				183AF06D1F6EB33000EF0AFA /* seqmap.h in Headers */,
+				183AF0691F6EB33000EF0AFA /* options.h in Headers */,
+				183AF06B1F6EB33000EF0AFA /* optparse.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		183AEFF71F6EA7DB00EF0AFA /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				183AF01C1F6EA8DF00EF0AFA /* fping.h in Headers */,
+				183AF01A1F6EA8DF00EF0AFA /* config.h in Headers */,
+				183AEFFE1F6EA7DB00EF0AFA /* fpingx.h in Headers */,
+				183AF0211F6EA8DF00EF0AFA /* seqmap.h in Headers */,
+				183AF01D1F6EA8DF00EF0AFA /* options.h in Headers */,
+				183AF01F1F6EA8DF00EF0AFA /* optparse.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		183AEFE91F6EA7B900EF0AFA /* fpingx */ = {
+		183AEFE91F6EA7B900EF0AFA /* fpingx-macOS */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 183AEFF21F6EA7B900EF0AFA /* Build configuration list for PBXNativeTarget "fpingx" */;
+			buildConfigurationList = 183AEFF21F6EA7B900EF0AFA /* Build configuration list for PBXNativeTarget "fpingx-macOS" */;
 			buildPhases = (
 				183AEFE51F6EA7B900EF0AFA /* Sources */,
 				183AEFE61F6EA7B900EF0AFA /* Frameworks */,
@@ -79,10 +222,47 @@
 			);
 			dependencies = (
 			);
-			name = fpingx;
+			name = "fpingx-macOS";
 			productName = fpingx;
 			productReference = 183AEFEA1F6EA7B900EF0AFA /* fpingx.framework */;
 			productType = "com.apple.product-type.framework";
+		};
+		183AEFF91F6EA7DB00EF0AFA /* fpingx-iOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 183AEFFF1F6EA7DB00EF0AFA /* Build configuration list for PBXNativeTarget "fpingx-iOS" */;
+			buildPhases = (
+				183AEFF51F6EA7DB00EF0AFA /* Sources */,
+				183AEFF61F6EA7DB00EF0AFA /* Frameworks */,
+				183AEFF71F6EA7DB00EF0AFA /* Headers */,
+				183AEFF81F6EA7DB00EF0AFA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "fpingx-iOS";
+			productName = fpingx;
+			productReference = 183AEFFA1F6EA7DB00EF0AFA /* fpingx.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		183AF04D1F6EAEDF00EF0AFA /* Demo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 183AF05D1F6EAEDF00EF0AFA /* Build configuration list for PBXNativeTarget "Demo" */;
+			buildPhases = (
+				183AF04A1F6EAEDF00EF0AFA /* Sources */,
+				183AF04B1F6EAEDF00EF0AFA /* Frameworks */,
+				183AF04C1F6EAEDF00EF0AFA /* Resources */,
+				183AF0641F6EAF2200EF0AFA /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				183AF0631F6EAF2200EF0AFA /* PBXTargetDependency */,
+			);
+			name = Demo;
+			productName = Demo;
+			productReference = 183AF04E1F6EAEDF00EF0AFA /* Demo.app */;
+			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
 
@@ -90,10 +270,21 @@
 		183AEFE11F6EA7B900EF0AFA /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftUpdateCheck = 0900;
 				LastUpgradeCheck = 0900;
 				ORGANIZATIONNAME = "Jie Zhang";
 				TargetAttributes = {
 					183AEFE91F6EA7B900EF0AFA = {
+						CreatedOnToolsVersion = 9.0;
+						LastSwiftMigration = 0900;
+						ProvisioningStyle = Manual;
+					};
+					183AEFF91F6EA7DB00EF0AFA = {
+						CreatedOnToolsVersion = 9.0;
+						LastSwiftMigration = 0900;
+						ProvisioningStyle = Manual;
+					};
+					183AF04D1F6EAEDF00EF0AFA = {
 						CreatedOnToolsVersion = 9.0;
 						ProvisioningStyle = Automatic;
 					};
@@ -105,13 +296,16 @@
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
+				Base,
 			);
 			mainGroup = 183AEFE01F6EA7B900EF0AFA;
 			productRefGroup = 183AEFEB1F6EA7B900EF0AFA /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				183AEFE91F6EA7B900EF0AFA /* fpingx */,
+				183AEFE91F6EA7B900EF0AFA /* fpingx-macOS */,
+				183AEFF91F6EA7DB00EF0AFA /* fpingx-iOS */,
+				183AF04D1F6EAEDF00EF0AFA /* Demo */,
 			);
 		};
 /* End PBXProject section */
@@ -124,6 +318,23 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		183AEFF81F6EA7DB00EF0AFA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		183AF04C1F6EAEDF00EF0AFA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				183AF05B1F6EAEDF00EF0AFA /* LaunchScreen.storyboard in Resources */,
+				183AF0581F6EAEDF00EF0AFA /* Assets.xcassets in Resources */,
+				183AF0561F6EAEDF00EF0AFA /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -131,10 +342,65 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				183AF06F1F6EB33000EF0AFA /* socket6.c in Sources */,
+				183AF0701F6EB3B800EF0AFA /* fpingx.swift in Sources */,
+				183AF0671F6EB33000EF0AFA /* fping.c in Sources */,
+				183AF06A1F6EB33000EF0AFA /* optparse.c in Sources */,
+				183AF06C1F6EB33000EF0AFA /* seqmap.c in Sources */,
+				183AF06E1F6EB33000EF0AFA /* socket4.c in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		183AEFF51F6EA7DB00EF0AFA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				183AF0231F6EA8DF00EF0AFA /* socket6.c in Sources */,
+				183AF0261F6EA90B00EF0AFA /* fpingx.swift in Sources */,
+				183AF01B1F6EA8DF00EF0AFA /* fping.c in Sources */,
+				183AF01E1F6EA8DF00EF0AFA /* optparse.c in Sources */,
+				183AF0201F6EA8DF00EF0AFA /* seqmap.c in Sources */,
+				183AF0221F6EA8DF00EF0AFA /* socket4.c in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		183AF04A1F6EAEDF00EF0AFA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				183AF0531F6EAEDF00EF0AFA /* ViewController.swift in Sources */,
+				183AF0511F6EAEDF00EF0AFA /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		183AF0631F6EAF2200EF0AFA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 183AEFF91F6EA7DB00EF0AFA /* fpingx-iOS */;
+			targetProxy = 183AF0621F6EAF2200EF0AFA /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		183AF0541F6EAEDF00EF0AFA /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				183AF0551F6EAEDF00EF0AFA /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		183AF0591F6EAEDF00EF0AFA /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				183AF05A1F6EAEDF00EF0AFA /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		183AEFF01F6EA7B900EF0AFA /* Debug */ = {
@@ -252,20 +518,26 @@
 		183AEFF31F6EA7B900EF0AFA /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_STYLE = Manual;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = "";
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				FRAMEWORK_VERSION = A;
-				INFOPLIST_FILE = fpingx/Info.plist;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				INFOPLIST_FILE = "$(SRCROOT)/fpingx/Info-macOS.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.nsswift.fpingx;
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.nsswift.fpingx-macOS";
+				PRODUCT_NAME = fpingx;
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 			};
 			name = Debug;
@@ -273,21 +545,125 @@
 		183AEFF41F6EA7B900EF0AFA /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_STYLE = Manual;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = "";
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				FRAMEWORK_VERSION = A;
-				INFOPLIST_FILE = fpingx/Info.plist;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				INFOPLIST_FILE = "$(SRCROOT)/fpingx/Info-macOS.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.nsswift.fpingx;
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.nsswift.fpingx-macOS";
+				PRODUCT_NAME = fpingx;
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 4.0;
+			};
+			name = Release;
+		};
+		183AF0001F6EA7DB00EF0AFA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES = NO;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Manual;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = "";
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				INFOPLIST_FILE = "$(SRCROOT)/fpingx/Info-iOS.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.nsswift.fpingx-iOS";
+				PRODUCT_NAME = fpingx;
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		183AF0011F6EA7DB00EF0AFA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES = NO;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Manual;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = "";
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				INFOPLIST_FILE = "$(SRCROOT)/fpingx/Info-iOS.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.nsswift.fpingx-iOS";
+				PRODUCT_NAME = fpingx;
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		183AF05E1F6EAEDF00EF0AFA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 4Z5Z5TE9EX;
+				INFOPLIST_FILE = Demo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.nsswift.Demo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SDKROOT = iphoneos;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		183AF05F1F6EAEDF00EF0AFA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 4Z5Z5TE9EX;
+				INFOPLIST_FILE = Demo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.nsswift.Demo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SDKROOT = iphoneos;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
 		};
@@ -303,11 +679,29 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		183AEFF21F6EA7B900EF0AFA /* Build configuration list for PBXNativeTarget "fpingx" */ = {
+		183AEFF21F6EA7B900EF0AFA /* Build configuration list for PBXNativeTarget "fpingx-macOS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				183AEFF31F6EA7B900EF0AFA /* Debug */,
 				183AEFF41F6EA7B900EF0AFA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		183AEFFF1F6EA7DB00EF0AFA /* Build configuration list for PBXNativeTarget "fpingx-iOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				183AF0001F6EA7DB00EF0AFA /* Debug */,
+				183AF0011F6EA7DB00EF0AFA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		183AF05D1F6EAEDF00EF0AFA /* Build configuration list for PBXNativeTarget "Demo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				183AF05E1F6EAEDF00EF0AFA /* Debug */,
+				183AF05F1F6EAEDF00EF0AFA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
