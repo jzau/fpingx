@@ -8,7 +8,6 @@
 #include <netinet/in.h>
 
 /* fping.c */
-int main(int argc, char** argv);
 void crash_and_burn( char *message );
 void errno_crash_and_burn( char *message );
 int in_cksum( unsigned short *p, int n );
@@ -52,9 +51,9 @@ typedef struct host_entry {
 } HOST_ENTRY;
 
 /*** globals ***/
-
-HOST_ENTRY** fping(int argc, char** argv);
-float update_progress();
+typedef void (*progress)(float progress);
+HOST_ENTRY** fping(int argc, char** argv, progress p_callback);
+int mainx(int argc, char** argv, progress);
 
 /* socket.c */
 int  open_ping_socket_ipv4();

@@ -35,6 +35,10 @@ public struct FpingxResult {
 
 }
 
+func testProgress(a: Float) {
+    print("\(a)")
+}
+
 public class fpingx {
 
     /// Send ping with completion block.
@@ -51,7 +55,7 @@ public class fpingx {
         var cargs = argv.map { $0.flatMap { UnsafeMutablePointer<Int8>(strdup($0)) } }
 
         DispatchQueue.global(qos: .background).async {
-            let resultsArrarPtr = fping(Int32(argv.count), &cargs)!
+            let resultsArrarPtr = fping(Int32(argv.count), &cargs, testProgress)!
             var hostPtr = resultsArrarPtr.pointee
 
             var results: [String: FpingxResult] = [:]
@@ -67,8 +71,9 @@ public class fpingx {
 
             free(UnsafeMutablePointer(resultsArrarPtr))
             completion(results)
+
+            for ptr in cargs { free(UnsafeMutablePointer(ptr)) }
         }
 
-        for ptr in cargs { free(UnsafeMutablePointer(ptr)) }
     }
 }

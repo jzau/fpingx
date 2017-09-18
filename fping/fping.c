@@ -316,7 +316,7 @@ void print_per_system_stats(void);
 void print_per_system_splits(void);
 void print_netdata(void);
 void print_global_stats(void);
-void main_loop();
+void main_loop(progress p_callback);
 void finish();
 char* sprint_tm(int t);
 void ev_enqueue(HOST_ENTRY* h);
@@ -343,11 +343,14 @@ int addr_cmp(struct sockaddr* a, struct sockaddr* b);
 
  ************************************************************/
 
-HOST_ENTRY** fping(int argc, char** argv) {
-    num_hosts = 0;
-    printf("number of ping sent %d\n", num_pingsent);
 
-    main(argc, argv);
+HOST_ENTRY** fping(int argc, char** argv, progress p_callback) {
+    num_hosts = 0;
+    num_pingsent = 0;
+    num_timeout = 0;
+    num_pingreceived = 0;
+
+    mainx(argc, argv, p_callback);
 
     int i;
     HOST_ENTRY* h, *prev_h, *next_h;
@@ -372,11 +375,7 @@ HOST_ENTRY** fping(int argc, char** argv) {
     return results;
 }
 
-float update_progress() {
-    return (float)(num_pingreceived + num_timeout * count + num_pingsent) / (float)(num_hosts * count * 2);
-}
-
-int main(int argc, char** argv)
+int mainx(int argc, char** argv, progress p_callback)
 {
     int c, i, n;
     char* buf;
@@ -1024,7 +1023,7 @@ int main(int argc, char** argv)
     seqmap_init();
 
     /* main loop */
-    main_loop();
+    main_loop(p_callback);
 
     finish();
 
@@ -1154,7 +1153,7 @@ void add_range(char* start, char* end)
     }
 }
 
-void main_loop()
+void main_loop(progress p_callback)
 {
     long lt;
     long wait_time;
@@ -1290,7 +1289,9 @@ void main_loop()
             while (timeval_diff(&current_time, &next_report_time) >= 0)
                 timeval_add(&next_report_time, report_interval);
         }
-        update_progress();
+
+        float progress = (float)(num_pingreceived + num_timeout * count + num_pingsent) / (float)(num_hosts * count * 2);
+        p_callback(progress);
     }
 }
 
