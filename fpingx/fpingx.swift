@@ -35,8 +35,10 @@ public struct FpingxResult {
 
 }
 
-func testProgress(a: Float) {
-    print("\(a)")
+// Use notification for a workaround
+// since A C function pointer cannot be formed from a local function that captures context
+private func progressCCallback(progress: Float) {
+    NotificationCenter.default.post(name: NSNotification.Name(rawValue: "fpingxProgress"), object: nil, userInfo: ["progress": progress])
 }
 
 public class fpingx {
@@ -49,13 +51,21 @@ public class fpingx {
     ///   - count: number of ping send per host
     ///   - completion: results dictionary, the key is host string, the value is FpingxResult struct
 
-    public static func ping(hosts: [String], backoff: Float = 1.5, count: Int = 1, completion: @escaping (_ results: [String: FpingxResult]) -> Void) {
+    public static func ping(hosts: [String], backoff: Float = 1.5, count: Int = 1,
+                            progress: ((_ progress: (Float)) -> Void)? = nil,
+                            completion: @escaping (_ results: [String: FpingxResult]) -> Void) {
 
         let argv:[String?] = ["", "-c\(count)", "-B\(backoff)", "-q"] + hosts + [nil]
         var cargs = argv.map { $0.flatMap { UnsafeMutablePointer<Int8>(strdup($0)) } }
 
+        let observer = NotificationCenter.default.addObserver(forName: NSNotification.Name(rawValue: "fpingxProgress"), object: nil, queue: OperationQueue()) { (notification) in
+            if let p = notification.userInfo!["progress"] as? Float {
+                progress?(p > 1 ? 1 : p)
+            }
+        }
+
         DispatchQueue.global(qos: .background).async {
-            let resultsArrarPtr = fping(Int32(argv.count), &cargs, testProgress)!
+            let resultsArrarPtr = fping(Int32(argv.count), &cargs, progressCCallback)!
             var hostPtr = resultsArrarPtr.pointee
 
             var results: [String: FpingxResult] = [:]
@@ -71,7 +81,7 @@ public class fpingx {
 
             free(UnsafeMutablePointer(resultsArrarPtr))
             completion(results)
-
+            NotificationCenter.default.removeObserver(observer)
             for ptr in cargs { free(UnsafeMutablePointer(ptr)) }
         }
 

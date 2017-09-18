@@ -15,13 +15,15 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
 
-        fpingx.ping(hosts: ["google.com", "baidu.com", "apple.com", "abc.a"], backoff: 1, count: 5) { (result) in
+        fpingx.ping(hosts: ["google.com", "baidu.com", "apple.com", "abc.c"]) { (result) in
             print(result)
         }
     }
 
     @IBAction func test(_ sender: Any) {
-        fpingx.ping(hosts: ["google.com", "baidu.com", "apple.com", "abc.a"], backoff: 1, count: 5) { (result) in
+        fpingx.ping(hosts: ["google.com", "baidu.com", "apple.com", "abc.c"], progress: { (t) in
+            print(t)
+        }) { (result) in
             print(result)
         }
     }
