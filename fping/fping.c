@@ -345,6 +345,8 @@ int addr_cmp(struct sockaddr* a, struct sockaddr* b);
 
 HOST_ENTRY** fping(int argc, char** argv) {
     num_hosts = 0;
+    printf("number of ping sent %d\n", num_pingsent);
+
     main(argc, argv);
 
     int i;
@@ -355,8 +357,6 @@ HOST_ENTRY** fping(int argc, char** argv) {
     for (i = 0; i < num_hosts; i++) {
         h = table[i];
 
-        printf("%d\n", i);
-        printf("%s\n", h->host);
         if (i > 0) {
             prev_h = table[i-1];
             h->ev_prev = prev_h;
@@ -372,6 +372,9 @@ HOST_ENTRY** fping(int argc, char** argv) {
     return results;
 }
 
+float update_progress() {
+    return (float)(num_pingreceived + num_timeout * count + num_pingsent) / (float)(num_hosts * count * 2);
+}
 
 int main(int argc, char** argv)
 {
@@ -1287,6 +1290,7 @@ void main_loop()
             while (timeval_diff(&current_time, &next_report_time) >= 0)
                 timeval_add(&next_report_time, report_interval);
         }
+        update_progress();
     }
 }
 

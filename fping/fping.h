@@ -54,6 +54,7 @@ typedef struct host_entry {
 /*** globals ***/
 
 HOST_ENTRY** fping(int argc, char** argv);
+float update_progress();
 
 /* socket.c */
 int  open_ping_socket_ipv4();
