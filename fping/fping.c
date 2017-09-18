@@ -344,6 +344,7 @@ int addr_cmp(struct sockaddr* a, struct sockaddr* b);
  ************************************************************/
 
 HOST_ENTRY** fping(int argc, char** argv) {
+    num_hosts = 0;
     main(argc, argv);
 
     int i;
@@ -367,6 +368,7 @@ HOST_ENTRY** fping(int argc, char** argv) {
 
         results[i] = h;
     }
+    free(table);
     return results;
 }
 
