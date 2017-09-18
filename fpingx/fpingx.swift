@@ -8,43 +8,67 @@
 
 import Foundation
 
-public struct FpingX {
-    let host: String
-    let xmt: Int
-    let rcv: Int
-    var loss: Int {
+/// ping result
+public struct FpingxResult {
+
+    public let host: String
+
+    /// number of sent
+    public let xmt: Int
+
+    /// number of received
+    public let rcv: Int
+
+    /// loss percentage (value from 0-100)
+    public var loss: Int {
         return xmt > 0 ? (xmt - rcv) * 100 / xmt : 0
     }
 
-    let avg: Int?
-    let min: Int?
-    let max: Int?
+    /// nil if rcv is 0
+    public let avg: Int?
+
+    /// nil if rcv is 0
+    public let min: Int?
+
+    /// nil if rcv is 0
+    public let max: Int?
 
 }
 
 public class fpingx {
-    public static func ping(hosts: [String], backoff: Float = 1.5, count: Int = 1, completion: (_ result: [FpingX]) -> Void) {
+
+    /// Send ping with completion block.
+    ///
+    /// - Parameters:
+    ///   - hosts: hosts
+    ///   - backoff: default 1.5
+    ///   - count: number of ping send per host
+    ///   - completion: results dictionary, the key is host string, the value is FpingxResult struct
+
+    public static func ping(hosts: [String], backoff: Float = 1.5, count: Int = 1, completion: @escaping (_ results: [String: FpingxResult]) -> Void) {
 
         let argv:[String?] = ["", "-c\(count)", "-B\(backoff)", "-q"] + hosts + [nil]
-
-        typealias fpingHostPtr = UnsafeMutablePointer<HOST_ENTRY>?
-
-        // Create [UnsafePointer<Int8>]:
         var cargs = argv.map { $0.flatMap { UnsafeMutablePointer<Int8>(strdup($0)) } }
-        // Call C function:
-        let d = fping(4, &cargs)!
-        var node:fpingHostPtr = d.pointee
 
-        var results: [FpingX] = []
-        while (node != nil) {
-            let h = node!.pointee
-            let result = FpingX(host: String(cString: h.host), xmt: Int(h.num_sent), rcv: Int(h.num_recv), avg: h.num_recv > 0 ? Int(h.total_time / h.num_recv / 100) : nil, min: h.num_recv > 0 ? Int(h.min_reply / 100) : nil, max: h.num_recv > 0 ? Int(h.max_reply / 100) : nil)
-            results.append(result)
+        DispatchQueue.global(qos: .background).async {
+            let resultsArrarPtr = fping(Int32(argv.count), &cargs)!
+            var hostPtr = resultsArrarPtr.pointee
 
-            node = node?.pointee.ev_next
+            var results: [String: FpingxResult] = [:]
+            while (hostPtr != nil) {
+                let h = hostPtr!.pointee
+                let host = String(cString: h.host)
+                let result = FpingxResult(host: host, xmt: Int(h.num_sent), rcv: Int(h.num_recv), avg: h.num_recv > 0 ? Int(h.total_time / h.num_recv / 100) : nil, min: h.num_recv > 0 ? Int(h.min_reply / 100) : nil, max: h.num_recv > 0 ? Int(h.max_reply / 100) : nil)
+                results[host] = result
+                let freeNode = hostPtr
+                hostPtr = hostPtr?.pointee.ev_next
+                free(UnsafeMutableRawPointer(freeNode))
+            }
+
+            free(UnsafeMutablePointer(resultsArrarPtr))
+            completion(results)
         }
-        // Free the duplicated strings:
+
         for ptr in cargs { free(UnsafeMutablePointer(ptr)) }
-        completion(results)
     }
 }
