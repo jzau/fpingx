@@ -9,7 +9,7 @@
 import Foundation
 
 /// ping result
-public struct FpingxResult {
+public struct FpingxResult: Codable {
 
     public let host: String
 
