@@ -74,7 +74,7 @@ public struct FpingxResult {
 
 ## Author
 
-[jackymelb](https://github.com/jackymelb) (Twitter: [@jackymelb](https://twitter.com/jackymelb))
+[jzau](https://github.com/jzau) (Twitter: [@Jie](https://twitter.com/jzzzau))
 
 ## Credits of fping
 
