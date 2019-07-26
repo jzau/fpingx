@@ -1,6 +1,6 @@
 # fpingx
 
-![Language](https://img.shields.io/badge/language-Swift%204.0-orange.svg)
+![Language](https://img.shields.io/badge/language-Swift%205-green.svg)
 [![CocoaPods](https://img.shields.io/cocoapods/v/fpingx.svg)]()
 [![Carthage Compatible](https://img.shields.io/badge/Carthage-✓-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
 [![CocoaPods](https://img.shields.io/cocoapods/p/fpingx.svg)]()
@@ -21,7 +21,7 @@ pod "fpingx"
 ### Carthage
 
 ``` 
-github "jackymelb/fpingx"
+github "jzau/fpingx"
 ```
 
 
