@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import Cfping
 
 /// ping result
 public struct FpingxResult: Codable {
